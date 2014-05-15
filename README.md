@@ -1,4 +1,5 @@
-===Create a set of Classes that conform to the following Standards===
+Create a set of Classes that conform to the following Standards
+===============================================================
 
  - Provide an iterable, randomly accessable set of points
  	 + Stream.php ( Uses Point.php)
@@ -14,13 +15,15 @@
 		7. Maximum
 		
 
+
 		Example: 
 		
-			a->add(b) =>
-		        A     B     C
-			     |0|   |1|   |1|
-			     |1| + |2| = |3|
-			     |2|   |3|   |5|
+		a->add(b) =>
+		
+		A     B     C
+	 |0|   |1|   |1|
+	 |1| + |2| = |3|
+	 |2|   |3|   |5|
 					 
 
  - In order to 'combine' (Operations Listed Above) two Streams, the following conditions must be met:
