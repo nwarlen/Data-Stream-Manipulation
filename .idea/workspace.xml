@@ -23,52 +23,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PointTest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/Streams/Data/PointTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="62" selection-start="45" selection-end="107" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="675">
-              <folding>
-                <element signature="e#109#140#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Point.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Streams/Data/Point.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="21" selection-start="68" selection-end="68" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="465">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="8" selection-start="253" selection-end="253" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="960">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StreamTest.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/Streams/Data/StreamTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="23" selection-start="1571" selection-end="1571" vertical-scroll-proportion="7.9583335" vertical-offset="1226" max-vertical-offset="2460">
+            <state line="68" column="1" selection-start="1444" selection-end="1444" vertical-scroll-proportion="-13.916667" vertical-offset="686" max-vertical-offset="1110">
               <folding>
-                <element signature="e#74#97#0" expanded="true" />
-                <element signature="e#124#207#0" expanded="false" />
+                <element signature="e#103#134#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Stream.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Streams/Data/Stream.php">
+      <file leaf-file-name="Minimum.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Streams/Operation/Minimum.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="31" selection-start="1566" selection-end="1705" vertical-scroll-proportion="0.7358491" vertical-offset="693" max-vertical-offset="3465">
-              <folding />
+            <state line="22" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="9.833333" vertical-offset="491" max-vertical-offset="915">
+              <folding>
+                <element signature="e#122#145#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MinimumTest.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/Streams/Operation/MinimumTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="41" selection-end="41" vertical-scroll-proportion="0.106132075" vertical-offset="0" max-vertical-offset="1245">
+              <folding>
+                <element signature="e#114#137#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,13 +71,25 @@
         <option value="$PROJECT_DIR$/src/Streams/Console/Commands/addCommand.php" />
         <option value="$PROJECT_DIR$/Test/Streams/Data/PointTest.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/test/Streams/Data/PointTest.php" />
         <option value="$PROJECT_DIR$/src/Streams/Data/Point.php" />
         <option value="$PROJECT_DIR$/test/Streams/Console/Commands/AddCommandTest.php" />
         <option value="$PROJECT_DIR$/src/Streams/Console/Commands/commands.php" />
         <option value="$PROJECT_DIR$/test/Streams/Console/Commands/commandsTest.php" />
-        <option value="$PROJECT_DIR$/test/Streams/Data/StreamTest.php" />
+        <option value="$PROJECT_DIR$/test/Streams/Data/PointTest.php" />
+        <option value="$PROJECT_DIR$/src/Streams/Operation/ValidStreams.php" />
+        <option value="$PROJECT_DIR$/test/Streams/Operation/AddTest.php" />
+        <option value="$PROJECT_DIR$/test/Streams/Operation/ValidStreamsTest.php" />
+        <option value="$PROJECT_DIR$/test/Streams/Operation/SubtractTest.php" />
+        <option value="$PROJECT_DIR$/src/Streams/Operation/Subtract.php" />
+        <option value="$PROJECT_DIR$/test/Streams/Operation/MultiplyTest.php" />
+        <option value="$PROJECT_DIR$/test/Streams/Operation/DivideTest.php" />
+        <option value="$PROJECT_DIR$/src/Streams/Operation/Multiply.php" />
+        <option value="$PROJECT_DIR$/src/Streams/Operation/Divide.php" />
         <option value="$PROJECT_DIR$/src/Streams/Data/Stream.php" />
+        <option value="$PROJECT_DIR$/src/Streams/Operation/Add.php" />
+        <option value="$PROJECT_DIR$/src/Streams/Operation/Minimum.php" />
+        <option value="$PROJECT_DIR$/test/Streams/Data/StreamTest.php" />
+        <option value="$PROJECT_DIR$/test/Streams/Operation/MinimumTest.php" />
       </list>
     </option>
   </component>
@@ -168,7 +163,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Data" />
+              <option name="myItemId" value="Operation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -190,7 +185,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Console" />
+              <option name="myItemId" value="Data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -205,6 +200,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Streams" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Operation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -227,28 +244,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Streams" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Console" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -320,26 +315,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1276" height="778" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32863188" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915374" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32863188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -428,29 +423,134 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Streams/Operation/ValidStreams.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="2" selection-start="854" selection-end="854" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/Streams/Data/PointTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="62" selection-start="45" selection-end="107" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="675">
+        <state line="2" column="10" selection-start="17" selection-end="35" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="675">
           <folding>
-            <element signature="e#109#140#0" expanded="true" />
+            <element signature="e#101#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Streams/Data/StreamTest.php">
+    <entry file="file://$PROJECT_DIR$/test/Streams/Operation/SubtractTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="23" selection-start="1571" selection-end="1571" vertical-scroll-proportion="7.9583335" vertical-offset="1226" max-vertical-offset="2460">
+        <state line="4" column="0" selection-start="42" selection-end="112" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="855">
           <folding>
-            <element signature="e#74#97#0" expanded="true" />
-            <element signature="e#124#207#0" expanded="false" />
+            <element signature="e#114#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Streams/Operation/AddTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="5" selection-start="244" selection-end="1467" vertical-scroll-proportion="-14.208333" vertical-offset="694" max-vertical-offset="1155">
+          <folding>
+            <element signature="e#110#133#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Streams/Operation/ValidStreamsTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="72" selection-start="197" selection-end="197" vertical-scroll-proportion="-2.3333333" vertical-offset="19" max-vertical-offset="465">
+          <folding>
+            <element signature="e#201#225#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Streams/Operation/Subtract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="14" selection-start="337" selection-end="337" vertical-scroll-proportion="-5.625" vertical-offset="150" max-vertical-offset="825">
+          <folding>
+            <element signature="e#121#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Streams/Operation/MultiplyTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="46" selection-start="43" selection-end="114" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="1155">
+          <folding>
+            <element signature="e#115#138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Streams/Operation/Multiply.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="87" selection-start="435" selection-end="435" vertical-scroll-proportion="0.7783019" vertical-offset="0" max-vertical-offset="840">
+          <folding>
+            <element signature="e#121#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Streams/Operation/DivideTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="36" selection-start="43" selection-end="112" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="1170">
+          <folding>
+            <element signature="e#114#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Streams/Operation/Divide.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="5" selection-start="191" selection-end="1359" vertical-scroll-proportion="-15.791667" vertical-offset="356" max-vertical-offset="840">
+          <folding>
+            <element signature="e#122#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Streams/Operation/Add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="31" selection-start="374" selection-end="540" vertical-scroll-proportion="0.38915095" vertical-offset="240" max-vertical-offset="900">
+          <folding>
+            <element signature="e#38#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Streams/Data/Stream.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="31" selection-start="1566" selection-end="1705" vertical-scroll-proportion="0.7358491" vertical-offset="693" max-vertical-offset="3465">
+        <state line="10" column="12" selection-start="128" selection-end="128" vertical-scroll-proportion="0.1768868" vertical-offset="0" max-vertical-offset="1290">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Streams/Data/StreamTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="1" selection-start="1444" selection-end="1444" vertical-scroll-proportion="-13.916667" vertical-offset="686" max-vertical-offset="1110">
+          <folding>
+            <element signature="e#103#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Streams/Operation/Minimum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="9.833333" vertical-offset="491" max-vertical-offset="915">
+          <folding>
+            <element signature="e#122#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Streams/Operation/MinimumTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="41" selection-end="41" vertical-scroll-proportion="0.106132075" vertical-offset="0" max-vertical-offset="1245">
+          <folding>
+            <element signature="e#114#137#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

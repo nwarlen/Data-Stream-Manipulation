@@ -1,6 +1,6 @@
 <?php
 
-namespace test\Streams\Console\Data;
+namespace test\Streams\Data;
 
 require_once __DIR__ . '/../../../src/Streams/Data/Point.php';
 
