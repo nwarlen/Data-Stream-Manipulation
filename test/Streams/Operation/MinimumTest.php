@@ -43,6 +43,38 @@ class MinimumTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @param $point1
+     *
+     * @dataProvider pointProvider
+     */
+    public function testItShouldMinimizeTwoValidStreamsWithZeros($point1)
+    {
+        $stream1 = new Stream(0,1);
+        $stream2 = new Stream(0,1);
+
+        $point3 = new Point();
+        $point3->setValue(0);
+
+        $stream1->addPoint($point1); //smallPoint value: 5
+        $stream2->addPoint($point3); //largePoint value: 0
+
+
+        $minimum = new Minimum();
+
+        /** @var $newStream Stream */
+        $newStream = $minimum->combine($stream1, $stream2);
+
+        /** @var $actual Point */
+        $actual = $newStream->getPoints()[0];
+
+        $newPoint = new Point();
+        $newPoint->setValue(0);
+
+
+        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+    }
+
+    /**
      * @param Point $point
      *
      * @dataProvider pointProvider
@@ -60,6 +92,39 @@ class MinimumTest extends \PHPUnit_Framework_TestCase
         $returnStream = $minimum->combine($stream1,$stream2);
 
         $this->assertNull($returnStream);
+    }
+
+    /**
+     * @param $point
+     *
+     * @dataProvider pointProvider
+     */
+    public function testItShouldHandleNullPoints($point)
+    {
+        $stream1 = new Stream();
+        $stream2 = new Stream();
+
+        $nullPoint = new Point();
+        $nullPoint->setValue(null);
+
+        $stream1->addPoint($point); //value: 10
+        $stream2->addPoint($nullPoint); //value: null
+
+        $minimum = new Minimum();
+        $returnStream = $minimum->combine($stream1,$stream2);
+
+
+        $actual = $returnStream->getPoints()[0];
+
+        $newPoint = new Point();
+        $newPoint->setValue(5);
+
+        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+
+        $returnStream = $minimum->combine($stream2,$stream1);
+        $actual = $returnStream->getPoints()[0];
+
+        $this->assertEquals($newPoint->getValue(),$actual->getValue());
     }
 
     public function pointProvider()

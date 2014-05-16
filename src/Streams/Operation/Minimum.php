@@ -53,8 +53,20 @@ class Minimum
 
         for($index = 0;$index < $numPoints;$index++) {
             $pointToAdd = new Point();
-            $pointValue = min($stream1->getPoints()[$index]->getValue() , $stream2->getPoints()[$index]->getValue());
-            $pointToAdd->setValue($pointValue);
+
+            if($stream1->getPoints()[$index]->getValue() === null) {
+                $pointToAdd->setValue($stream2->getPoints()[$index]->getValue());
+            }
+
+            else if($stream2->getPoints()[$index]->getValue() === null) {
+                $pointToAdd->setValue($stream1->getPoints()[$index]->getValue());
+            }
+
+            else {
+                $pointValue = min($stream1->getPoints()[$index]->getValue() , $stream2->getPoints()[$index]->getValue());
+                $pointToAdd->setValue($pointValue);
+            }
+
             $newStream->addPoint($pointToAdd);
         }
 

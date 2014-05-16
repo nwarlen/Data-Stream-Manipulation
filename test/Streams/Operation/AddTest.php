@@ -36,6 +36,50 @@ class AddTest extends \PHPUnit_Framework_TestCase
 
 
         $this->assertEquals($newPoint->getValue(),$actual->getValue());
+
+
+        //CHECK DIFFERENT SIZED STREAMS
+        $stream1->addPoint($point);
+        $stream1->addPoint($point);
+
+        $expectedSize = $newStream->getSize();
+
+        $newStream = $adder->combine($stream1,$stream2);
+        $actualSize = $newStream->getSize();
+
+        $this->assertEquals($expectedSize,$actualSize);
+    }
+
+    /**
+     * @param $point1
+     *
+     * @dataProvider pointProvider
+     */
+    public function testItShouldAddTwoValidStreamsWithZeros($point1)
+    {
+        $stream1 = new Stream(0,1);
+        $stream2 = new Stream(0,1);
+
+        $point3 = new Point();
+        $point3->setValue(0);
+
+        $stream1->addPoint($point1); //smallPoint value: 10
+        $stream2->addPoint($point3); //largePoint value: 0
+
+
+        $adder = new Add();
+
+        /** @var $newStream Stream */
+        $newStream = $adder->combine($stream1, $stream2);
+
+        /** @var $actual Point */
+        $actual = $newStream->getPoints()[0];
+
+        $newPoint = new Point();
+        $newPoint->setValue(10);
+
+
+        $this->assertEquals($newPoint->getValue(),$actual->getValue());
     }
 
     /**

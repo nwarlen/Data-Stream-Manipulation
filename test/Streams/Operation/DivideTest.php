@@ -40,6 +40,38 @@ class DivideTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @param $point1
+     *
+     * @dataProvider pointProvider
+     */
+    public function testItShouldDivideTwoValidStreamsWithZeros($point1)
+    {
+        $stream1 = new Stream(0,1);
+        $stream2 = new Stream(0,1);
+
+        $point3 = new Point();
+        $point3->setValue(0);
+
+        $stream1->addPoint($point1); //smallPoint value: 5
+        $stream2->addPoint($point3); //largePoint value: 0
+
+
+        $divide = new Divide();
+
+        /** @var $newStream Stream */
+        $newStream = $divide->combine($stream1, $stream2);
+
+        /** @var $actual Point */
+        $actual = $newStream->getPoints()[0];
+
+        $newPoint = new Point();
+        $newPoint->setValue(null); // 5/0=null
+
+
+        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+    }
+
+    /**
      * @param Point $point
      *
      * @dataProvider pointProvider

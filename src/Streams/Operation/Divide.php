@@ -51,7 +51,7 @@ class Divide
         for($index = 0;$index < $numPoints;$index++) {
             $pointToAdd = new Point();
             $pointValue = null;
-            if($stream2->getPoints()[$index]->getValue() !== null) {
+            if($stream2->getPoints()[$index]->getValue() != null) {
                 $pointValue = ($stream1->getPoints()[$index]->getValue()) / ($stream2->getPoints()[$index]->getValue());
             }
             $pointToAdd->setValue($pointValue);

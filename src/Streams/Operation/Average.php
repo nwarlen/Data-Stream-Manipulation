@@ -48,8 +48,19 @@ class Average
 
         for($index = 0;$index < $numPoints;$index++) {
             $pointToAdd = new Point();
-            $pointValue = ($stream1->getPoints()[$index]->getValue() + $stream2->getPoints()[$index]->getValue())/2;
-            $pointToAdd->setValue($pointValue);
+            if($stream1->getPoints()[$index]->getValue() === null) {
+                $pointToAdd->setValue($stream2->getPoints()[$index]->getValue());
+            }
+
+            else if($stream2->getPoints()[$index]->getValue() === null) {
+                $pointToAdd->setValue($stream1->getPoints()[$index]->getValue());
+            }
+
+            else {
+                $pointValue = ($stream1->getPoints()[$index]->getValue() + $stream2->getPoints()[$index]->getValue())/2;
+                $pointToAdd->setValue($pointValue);
+            }
+
             $newStream->addPoint($pointToAdd);
         }
 
