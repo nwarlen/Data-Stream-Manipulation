@@ -37,7 +37,7 @@
       <file leaf-file-name="Minimum.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Streams/Operation/Minimum.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="9.833333" vertical-offset="491" max-vertical-offset="915">
+            <state line="16" column="4" selection-start="192" selection-end="1587" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="915">
               <folding>
                 <element signature="e#122#145#0" expanded="true" />
               </folding>
@@ -45,10 +45,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinimumTest.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MinimumTest.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/Streams/Operation/MinimumTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="41" selection-end="41" vertical-scroll-proportion="0.106132075" vertical-offset="0" max-vertical-offset="1245">
+            <state line="25" column="58" selection-start="565" selection-end="565" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="1245">
+              <folding>
+                <element signature="e#114#137#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Maximum.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Streams/Operation/Maximum.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="46" selection-start="1458" selection-end="1458" vertical-scroll-proportion="-30.625" vertical-offset="0" max-vertical-offset="900">
+              <folding>
+                <element signature="e#38#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Average.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Streams/Operation/Average.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AverageTest.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/Streams/Operation/AverageTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
+              <folding>
+                <element signature="e#114#137#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaximumTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/Streams/Operation/MaximumTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="38" selection-start="42" selection-end="112" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1260">
               <folding>
                 <element signature="e#114#137#0" expanded="true" />
               </folding>
@@ -89,7 +131,10 @@
         <option value="$PROJECT_DIR$/src/Streams/Operation/Add.php" />
         <option value="$PROJECT_DIR$/src/Streams/Operation/Minimum.php" />
         <option value="$PROJECT_DIR$/test/Streams/Data/StreamTest.php" />
+        <option value="$PROJECT_DIR$/test/Streams/Operation/MaximumTest.php" />
         <option value="$PROJECT_DIR$/test/Streams/Operation/MinimumTest.php" />
+        <option value="$PROJECT_DIR$/src/Streams/Operation/Maximum.php" />
+        <option value="$PROJECT_DIR$/test/Streams/Operation/AverageTest.php" />
       </list>
     </option>
   </component>
@@ -327,7 +372,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32863188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32863188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -536,18 +581,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/Streams/Operation/MinimumTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="58" selection-start="565" selection-end="565" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="1245">
+          <folding>
+            <element signature="e#114#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Streams/Operation/Minimum.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="9.833333" vertical-offset="491" max-vertical-offset="915">
+        <state line="16" column="4" selection-start="192" selection-end="1587" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="915">
           <folding>
             <element signature="e#122#145#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Streams/Operation/MinimumTest.php">
+    <entry file="file://$PROJECT_DIR$/src/Streams/Operation/Maximum.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="41" selection-end="41" vertical-scroll-proportion="0.106132075" vertical-offset="0" max-vertical-offset="1245">
+        <state line="49" column="46" selection-start="1458" selection-end="1458" vertical-scroll-proportion="-30.625" vertical-offset="0" max-vertical-offset="900">
+          <folding>
+            <element signature="e#38#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Streams/Operation/Average.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="448">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Streams/Operation/MaximumTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="38" selection-start="42" selection-end="112" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1260">
+          <folding>
+            <element signature="e#114#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Streams/Operation/AverageTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
           <folding>
             <element signature="e#114#137#0" expanded="true" />
           </folding>

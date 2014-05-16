@@ -6,7 +6,7 @@ namespace Streams\Operation;
 use Streams\Data\Point;
 use Streams\Data\Stream;
 
-class Add
+class Maximum
 {
     private $validityCheck;
 
@@ -15,17 +15,17 @@ class Add
         $this->validityCheck = new ValidStreams();
     }
 
-
     /**
      * combine()
      *
-     * Description: Given a Stream, attempts to add all values in 'this' Stream and the new Stream.
+     * Description: Attempts to create a new Stream with the largest value at each index
+     *              from stream1 and stream2
      *
-     * Example: Add: $C = $add->combine(a,b) =>
+     * Example: Maximum: $C = $max->combine(a,b) =>
      *           A     B     C
      *          |0|   |1|   |1|
      *          |1| + |2| = |3|
-     *          |2|   |3|   |5|
+     *          |2|   |0|   |2|
      *
      * @param Stream $stream1
      * @param Stream $stream2
@@ -45,7 +45,7 @@ class Add
 
         for($index = 0;$index < $numPoints;$index++) {
             $pointToAdd = new Point();
-            $pointValue = ($stream1->getPoints()[$index]->getValue()) + ($stream2->getPoints()[$index]->getValue());
+            $pointValue = max($stream1->getPoints()[$index]->getValue() , $stream2->getPoints()[$index]->getValue());
             $pointToAdd->setValue($pointValue);
             $newStream->addPoint($pointToAdd);
         }

@@ -2,14 +2,14 @@
 
 namespace test\Streams\Operation;
 
-require_once __DIR__ . '/../../../src/Streams/Operation/Minimum.php';
+require_once __DIR__ . '/../../../src/Streams/Operation/Maximum.php';
 
 
 use Streams\Data\Point;
 use Streams\Data\Stream;
-use Streams\Operation\Minimum;
+use Streams\Operation\Maximum;
 
-class MinimumTest extends \PHPUnit_Framework_TestCase
+class MaximumTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @param $point1
@@ -17,7 +17,7 @@ class MinimumTest extends \PHPUnit_Framework_TestCase
      *
      * @dataProvider pointProvider
      */
-    public function testItShouldMinimizeTwoValidStreams($point1, $point2)
+    public function testItShouldMaximizeTwoValidStreams($point1, $point2)
     {
         $stream1 = new Stream(0,1);
         $stream2 = new Stream(0,1);
@@ -27,16 +27,16 @@ class MinimumTest extends \PHPUnit_Framework_TestCase
         $stream2->addPoint($point2); //largePoint value: 20
 
 
-        $minimum = new Minimum();
+        $maximum = new Maximum();
 
         /** @var $newStream Stream */
-        $newStream = $minimum->combine($stream1, $stream2);
+        $newStream = $maximum->combine($stream1, $stream2);
 
         /** @var $actual Point */
         $actual = $newStream->getPoints()[0];
 
         $newPoint = new Point();
-        $newPoint->setValue(5);
+        $newPoint->setValue(20);
 
 
         $this->assertEquals($newPoint->getValue(),$actual->getValue());
@@ -47,7 +47,7 @@ class MinimumTest extends \PHPUnit_Framework_TestCase
      *
      * @dataProvider pointProvider
      */
-    public function testItShouldNotMinimizeTwoStreamsThatAreNotCompatible(Point $point)
+    public function testItShouldNotMaximizeTwoStreamsThatAreNotCompatible(Point $point)
     {
         $stream1 = new Stream(1,2);
         $stream2 = new Stream(2,4);
@@ -55,9 +55,9 @@ class MinimumTest extends \PHPUnit_Framework_TestCase
         $stream1->addPoint($point);
         $stream2->addPoint($point);
 
-        $minimum = new Minimum();
+        $maximum = new Maximum();
 
-        $returnStream = $minimum->combine($stream1,$stream2);
+        $returnStream = $maximum->combine($stream1,$stream2);
 
         $this->assertNull($returnStream);
     }
@@ -76,3 +76,4 @@ class MinimumTest extends \PHPUnit_Framework_TestCase
         );
     }
 }
+ 

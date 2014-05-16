@@ -27,7 +27,7 @@ class Minimum
      * Description: Attempts to create a new Stream with the smallest value at each index
      *              from stream1 and stream2
      *
-     * Example: Minimum $C = $min->combine(a,b) =>
+     * Example: Minimum: $C = $min->combine(a,b) =>
      *           A     B     C
      *          |0|   |1|   |0|
      *          |1| + |2| = |1|

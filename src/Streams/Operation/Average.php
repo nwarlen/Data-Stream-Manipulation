@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: nwarlen
+ * Date: 5/16/14
+ * Time: 11:03 AM
+ */
 
 namespace Streams\Operation;
 
@@ -6,7 +12,7 @@ namespace Streams\Operation;
 use Streams\Data\Point;
 use Streams\Data\Stream;
 
-class Add
+class Average
 {
     private $validityCheck;
 
@@ -15,17 +21,17 @@ class Add
         $this->validityCheck = new ValidStreams();
     }
 
-
     /**
      * combine()
      *
-     * Description: Given a Stream, attempts to add all values in 'this' Stream and the new Stream.
+     * Description: Attempts to create a new Stream with the average value at each index
+     *              from stream1 and stream2
      *
-     * Example: Add: $C = $add->combine(a,b) =>
+     * Example: Average: $C = $avg->combine(a,b) =>
      *           A     B     C
-     *          |0|   |1|   |1|
-     *          |1| + |2| = |3|
-     *          |2|   |3|   |5|
+     *          |0|   |1|   |0.5|
+     *          |1| + |2| = |1.5|
+     *          |2|   |0|   |1.0|
      *
      * @param Stream $stream1
      * @param Stream $stream2
@@ -45,7 +51,7 @@ class Add
 
         for($index = 0;$index < $numPoints;$index++) {
             $pointToAdd = new Point();
-            $pointValue = ($stream1->getPoints()[$index]->getValue()) + ($stream2->getPoints()[$index]->getValue());
+            $pointValue = ($stream1->getPoints()[$index]->getValue() + $stream2->getPoints()[$index]->getValue())/2;
             $pointToAdd->setValue($pointValue);
             $newStream->addPoint($pointToAdd);
         }
