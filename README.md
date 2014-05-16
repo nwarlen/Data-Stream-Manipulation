@@ -41,6 +41,6 @@
 					 
 
 ###TODO###
- - [] Create Constant Point Streams
- - [] Create Linear Interpolation Operation
+ - [ ] Create Constant Point Streams
+ - [ ] Create Linear Interpolation Operation
  
