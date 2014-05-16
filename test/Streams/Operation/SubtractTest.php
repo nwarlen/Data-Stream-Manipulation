@@ -38,6 +38,41 @@ class SubtractTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($newPoint->getValue(),$actual->getValue());
     }
 
+    /**
+     * @param $point
+     *
+     * @dataProvider pointProvider
+     */
+    public function testItShouldHandleNullPoints($point)
+    {
+        $stream1 = new Stream();
+        $stream2 = new Stream();
+
+        $nullPoint = new Point();
+        $nullPoint->setValue(null);
+
+        $stream1->addPoint($point); //value: 10
+        $stream2->addPoint($nullPoint); //value: null
+
+        $subtract = new Subtract();
+        $returnStream = $subtract->combine($stream1,$stream2);
+
+
+        $actual = $returnStream->getPoints()[0];
+
+        $newPoint = new Point();
+        $newPoint->setValue(10);
+
+        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+
+        $returnStream = $subtract->combine($stream2,$stream1);
+        $actual = $returnStream->getPoints()[0];
+
+        $newPoint->setValue(-10);
+
+        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+    }
+
     public function pointProvider()
     {
         $point = new Point();

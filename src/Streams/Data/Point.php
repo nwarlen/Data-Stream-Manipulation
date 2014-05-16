@@ -14,9 +14,7 @@ class Point {
 
     public function setValue($value)
     {
-        if($value !== null) {
-            $this->value = $value;
-        }
+        $this->value = $value;
     }
 
 

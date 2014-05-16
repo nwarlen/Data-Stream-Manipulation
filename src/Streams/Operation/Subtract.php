@@ -27,6 +27,8 @@ class Subtract
      * Description: Attempts to subtract all values in stream2 from the values
      *              in stream1
      *
+     * If a point in either stream is null, it will simply be treated as '0'.
+     *
      * @param Stream $stream1
      * @param Stream $stream2
      * @return null|Stream - The resulting Stream --OR-- null if the two Streams cannot be
@@ -38,7 +40,9 @@ class Subtract
             return null;
         }
 
-        $newStream = new Stream();
+        $basis = $stream1->getBasis();
+        $interval = $stream1->getInterval();
+        $newStream = new Stream($basis,$interval);
 
         //find the stream with fewer points
         $numPoints = (($stream1->getSize()) <= ($stream2->getSize()) ? $stream1->getSize() : $stream2->getSize());

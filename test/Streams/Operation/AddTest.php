@@ -39,6 +39,39 @@ class AddTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @param $point
+     *
+     * @dataProvider pointProvider
+     */
+    public function testItShouldHandleNullPoints($point)
+    {
+        $stream1 = new Stream();
+        $stream2 = new Stream();
+
+        $nullPoint = new Point();
+        $nullPoint->setValue(null);
+
+        $stream1->addPoint($point); //value: 10
+        $stream2->addPoint($nullPoint); //value: null
+
+        $adder = new Add();
+        $returnStream = $adder->combine($stream1,$stream2);
+
+
+        $actual = $returnStream->getPoints()[0];
+
+        $newPoint = new Point();
+        $newPoint->setValue(10);
+
+        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+
+        $returnStream = $adder->combine($stream2,$stream1);
+        $actual = $returnStream->getPoints()[0];
+
+        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+    }
+
+    /**
      * @param Point $point
      *
      * @dataProvider pointProvider

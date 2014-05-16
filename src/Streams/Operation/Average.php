@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: nwarlen
- * Date: 5/16/14
- * Time: 11:03 AM
- */
 
 namespace Streams\Operation;
-
 
 use Streams\Data\Point;
 use Streams\Data\Stream;
@@ -27,6 +20,8 @@ class Average
      * Description: Attempts to create a new Stream with the average value at each index
      *              from stream1 and stream2
      *
+     * If a point from either stream is null the resulting stream at that index will be the non-null point.
+     *
      * Example: Average: $C = $avg->combine(a,b) =>
      *           A     B     C
      *          |0|   |1|   |0.5|
@@ -44,7 +39,9 @@ class Average
             return null;
         }
 
-        $newStream = new Stream();
+        $basis = $stream1->getBasis();
+        $interval = $stream1->getInterval();
+        $newStream = new Stream($basis,$interval);
 
         //find the stream with fewer points
         $numPoints = (($stream1->getSize()) <= ($stream2->getSize()) ? $stream1->getSize() : $stream2->getSize());

@@ -25,7 +25,9 @@ class Divide
     /**
      * combine()
      *
-     * Description: Attempts to divide all values in stream1 by the values in stream2
+     * Description: Attempts to divide all values in stream1 by the values in stream2.
+     *
+     * If any point in either stream is null, the resulting stream at that index will be null.
      *
      *
      * @param Stream $stream1
@@ -39,14 +41,19 @@ class Divide
             return null;
         }
 
-        $newStream = new Stream();
+        $basis = $stream1->getBasis();
+        $interval = $stream1->getInterval();
+        $newStream = new Stream($basis,$interval);
 
         //find the stream with fewer points
         $numPoints = (($stream1->getSize()) <= ($stream2->getSize()) ? $stream1->getSize() : $stream2->getSize());
 
         for($index = 0;$index < $numPoints;$index++) {
             $pointToAdd = new Point();
-            $pointValue = ($stream1->getPoints()[$index]->getValue()) * ($stream2->getPoints()[$index]->getValue());
+            $pointValue = null;
+            if($stream2->getPoints()[$index]->getValue() !== null) {
+                $pointValue = ($stream1->getPoints()[$index]->getValue()) / ($stream2->getPoints()[$index]->getValue());
+            }
             $pointToAdd->setValue($pointValue);
             $newStream->addPoint($pointToAdd);
         }

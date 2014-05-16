@@ -44,7 +44,9 @@ class Minimum
             return null;
         }
 
-        $newStream = new Stream();
+        $basis = $stream1->getBasis();
+        $interval = $stream1->getInterval();
+        $newStream = new Stream($basis,$interval);
 
         //find the stream with fewer points
         $numPoints = (($stream1->getSize()) <= ($stream2->getSize()) ? $stream1->getSize() : $stream2->getSize());

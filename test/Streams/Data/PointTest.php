@@ -12,10 +12,11 @@ class PointTest extends PHPUnit_Framework_TestCase {
 
     /**
      * @param $value
+     * @param $nullValue
      *
      * @dataProvider valueProvider
      */
-    public function testItShouldUpdateAPointsValue($value)
+    public function testItShouldUpdateAPointsValue($value,$nullValue)
     {
         $point = new Point();
         $point->setValue($value);
@@ -25,14 +26,20 @@ class PointTest extends PHPUnit_Framework_TestCase {
         $actual = $point->getValue();
 
         $this->assertEquals($expected,$actual);
-    }
 
+        $point->setValue($nullValue);
+
+        $actual = $point->getValue();
+
+        $this->assertNull($actual);
+    }
 
     public function valueProvider()
     {
         return array(
             array(
-                10
+                10,
+                null
             )
         );
     }

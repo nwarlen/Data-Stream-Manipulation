@@ -58,6 +58,39 @@ class MultiplyTest extends \PHPUnit_Framework_TestCase
         $this->assertNull($returnStream);
     }
 
+    /**
+     * @param $point
+     *
+     * @dataProvider pointProvider
+     */
+    public function testItShouldHandleNullPoints($point)
+    {
+        $stream1 = new Stream();
+        $stream2 = new Stream();
+
+        $nullPoint = new Point();
+        $nullPoint->setValue(null);
+
+        $stream1->addPoint($point); //value: 10
+        $stream2->addPoint($nullPoint); //value: null
+
+        $multiply = new Multiply();
+        $returnStream = $multiply->combine($stream1,$stream2);
+
+
+        $actual = $returnStream->getPoints()[0];
+
+        $newPoint = new Point();
+        $newPoint->setValue(null);
+
+        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+
+        $returnStream = $multiply->combine($stream2,$stream1);
+        $actual = $returnStream->getPoints()[0];
+
+        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+    }
+
     public function pointProvider()
     {
         $point = new Point();

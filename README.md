@@ -29,3 +29,15 @@ Create a set of Classes that conform to the following Standards
 		1. Basis Times for both Streams must be the same
 		2. Time Interval for both Streams must be the same 
 
+ - Null Values will be handled in the following manner:
+		
+		      Addition: null + 10 = 10     --> 10 + null = 10
+		   Subtraction: null - 10 = -10    --> 10 - null = 10
+		Multiplication: null * 10 = null   --> 10 * null = null
+		      Division: null / 10 = null   --> 10 / null = null
+					 Average: avg ( null , 10 ) = 10
+					 Minimum: min ( null , 10 ) = 10
+					 Maximum: max ( null , 10 ) = 10
+					 
+
+  

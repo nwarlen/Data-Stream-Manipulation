@@ -27,6 +27,7 @@ class Multiply
      *
      * Description: Attempts to multiply all values in stream1 by the values in stream2
      *
+     * If a point from either stream is null, the resulting stream at that index will be null.
      *
      * @param Stream $stream1
      * @param Stream $stream2
@@ -39,7 +40,9 @@ class Multiply
             return null;
         }
 
-        $newStream = new Stream();
+        $basis = $stream1->getBasis();
+        $interval = $stream1->getInterval();
+        $newStream = new Stream($basis,$interval);
 
         //find the stream with fewer points
         $numPoints = (($stream1->getSize()) <= ($stream2->getSize()) ? $stream1->getSize() : $stream2->getSize());

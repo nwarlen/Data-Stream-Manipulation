@@ -21,6 +21,8 @@ class Add
      *
      * Description: Given a Stream, attempts to add all values in 'this' Stream and the new Stream.
      *
+     * If any point in either stream is null, it will simply treated as a value of '0'.
+     *
      * Example: Add: $C = $add->combine(a,b) =>
      *           A     B     C
      *          |0|   |1|   |1|
@@ -38,7 +40,9 @@ class Add
             return null;
         }
 
-        $newStream = new Stream();
+        $basis = $stream1->getBasis();
+        $interval = $stream1->getInterval();
+        $newStream = new Stream($basis,$interval);
 
         //find the stream with fewer points
         $numPoints = (($stream1->getSize()) <= ($stream2->getSize()) ? $stream1->getSize() : $stream2->getSize());

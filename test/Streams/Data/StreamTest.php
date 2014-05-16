@@ -25,6 +25,13 @@ class StreamTest extends PHPUnit_Framework_TestCase {
         $sizeAfterAddingPoint = $stream->getSize();
 
         $this->assertTrue($size+1==$sizeAfterAddingPoint);
+
+        $nullPoint = new Point();
+        $nullPoint->setValue(null);
+        $stream->addPoint($nullPoint);
+        $sizeAfterAddingPoint = $stream->getSize();
+
+        $this->assertTrue($size+2 ==$sizeAfterAddingPoint);
     }
 
     /**
