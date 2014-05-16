@@ -1,5 +1,5 @@
-Create a set of Classes that conform to the following Standards
-===============================================================
+#Create a set of Classes that conform to the following Standards#
+
 
  - Provide an iterable, randomly accessable set of points
  	 + Stream.php ( Uses Point.php)
@@ -40,4 +40,7 @@ Create a set of Classes that conform to the following Standards
 					 Maximum: max ( null , 10 ) = 10
 					 
 
-  
+###TODO###
+ - [] Create Constant Point Streams
+ - [] Create Linear Interpolation Operation
+ 

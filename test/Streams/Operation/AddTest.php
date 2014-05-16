@@ -1,6 +1,5 @@
 <?php
 
-
 namespace test\Streams\Operation;
 
 require_once __DIR__ . '/../../../src/Streams/Operation/Add.php';
@@ -34,9 +33,7 @@ class AddTest extends \PHPUnit_Framework_TestCase
         $newPoint = new Point();
         $newPoint->setValue(20);
 
-
         $this->assertEquals($newPoint->getValue(),$actual->getValue());
-
 
         //CHECK DIFFERENT SIZED STREAMS
         $stream1->addPoint($point);
@@ -66,7 +63,6 @@ class AddTest extends \PHPUnit_Framework_TestCase
         $stream1->addPoint($point1); //smallPoint value: 10
         $stream2->addPoint($point3); //largePoint value: 0
 
-
         $adder = new Add();
 
         /** @var $newStream Stream */
@@ -77,7 +73,6 @@ class AddTest extends \PHPUnit_Framework_TestCase
 
         $newPoint = new Point();
         $newPoint->setValue(10);
-
 
         $this->assertEquals($newPoint->getValue(),$actual->getValue());
     }
