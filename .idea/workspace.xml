@@ -23,54 +23,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Operation.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Streams/Operation/Operation.php">
+      <file leaf-file-name="Stream.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Streams/Data/Stream.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="5" selection-start="1495" selection-end="1495" vertical-scroll-proportion="-30.625" vertical-offset="0" max-vertical-offset="840">
+            <state line="7" column="41" selection-start="116" selection-end="116" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1590">
+              <folding>
+                <element signature="e#32#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConstantStream.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Streams/Data/ConstantStream.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="15" selection-start="433" selection-end="433" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="585">
+              <folding>
+                <element signature="e#33#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConstantStreamTest.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/Streams/Data/ConstantStreamTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="5" selection-start="490" selection-end="490" vertical-scroll-proportion="0.7429245" vertical-offset="0" max-vertical-offset="435">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddTest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/Streams/Operation/AddTest.php">
+      <file leaf-file-name="StreamTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/Streams/Data/StreamTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="7" selection-start="2213" selection-end="2213" vertical-scroll-proportion="-11.208333" vertical-offset="1126" max-vertical-offset="1845">
+            <state line="4" column="0" selection-start="37" selection-end="100" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1425">
               <folding>
-                <element signature="e#109#133#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MinimumTest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/Streams/Operation/MinimumTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="8" selection-start="2438" selection-end="2438" vertical-scroll-proportion="-63.75" vertical-offset="0" max-vertical-offset="1695">
-              <folding>
-                <element signature="e#113#137#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stream.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Streams/Data/Stream.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="8" selection-start="1576" selection-end="1576" vertical-scroll-proportion="0.7783019" vertical-offset="690" max-vertical-offset="1395">
-              <folding>
-                <element signature="e#116#134#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StreamValidatorTest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/Streams/Operation/StreamValidatorTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="71" selection-start="196" selection-end="196" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="630">
-              <folding>
-                <element signature="e#204#228#0" expanded="true" />
+                <element signature="e#103#134#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,6 +71,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -104,7 +96,6 @@
         <option value="$PROJECT_DIR$/src/Streams/Operation/Minimum.php" />
         <option value="$PROJECT_DIR$/src/Streams/Operation/Multiply.php" />
         <option value="$PROJECT_DIR$/src/Streams/Operation/Subtract.php" />
-        <option value="$PROJECT_DIR$/test/Streams/Data/StreamTest.php" />
         <option value="$PROJECT_DIR$/test/Streams/Operation/AverageTest.php" />
         <option value="$PROJECT_DIR$/test/Streams/Operation/DivideTest.php" />
         <option value="$PROJECT_DIR$/test/Streams/Operation/MultiplyTest.php" />
@@ -117,7 +108,10 @@
         <option value="$PROJECT_DIR$/src/Streams/Operation/Operation.php" />
         <option value="$PROJECT_DIR$/test/Streams/Operation/AddTest.php" />
         <option value="$PROJECT_DIR$/test/Streams/Operation/MinimumTest.php" />
+        <option value="$PROJECT_DIR$/test/Streams/Data/StreamTest.php" />
         <option value="$PROJECT_DIR$/src/Streams/Data/Stream.php" />
+        <option value="$PROJECT_DIR$/src/Streams/Data/ConstantStream.php" />
+        <option value="$PROJECT_DIR$/test/Streams/Data/ConstantStreamTest.php" />
       </list>
     </option>
   </component>
@@ -347,16 +341,17 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19278997" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32863188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19278997" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32863188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -483,15 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Streams/Data/StreamTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.7877358" vertical-offset="446" max-vertical-offset="870">
-          <folding>
-            <element signature="e#103#134#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Streams/Operation/AverageTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="113" selection-end="113" vertical-scroll-proportion="0.21226415" vertical-offset="0" max-vertical-offset="1785">
@@ -587,10 +573,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Streams/Data/Stream.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="8" selection-start="1576" selection-end="1576" vertical-scroll-proportion="0.7783019" vertical-offset="690" max-vertical-offset="1395">
+        <state line="7" column="41" selection-start="116" selection-end="116" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1590">
           <folding>
-            <element signature="e#116#134#0" expanded="true" />
+            <element signature="e#32#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Streams/Data/ConstantStream.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="15" selection-start="433" selection-end="433" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="585">
+          <folding>
+            <element signature="e#33#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Streams/Data/StreamTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="37" selection-end="100" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1425">
+          <folding>
+            <element signature="e#103#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Streams/Data/ConstantStreamTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="5" selection-start="490" selection-end="490" vertical-scroll-proportion="0.7429245" vertical-offset="0" max-vertical-offset="435">
+          <folding />
         </state>
       </provider>
     </entry>

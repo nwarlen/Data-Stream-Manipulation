@@ -1,23 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: nwarlen
- * Date: 5/15/14
- * Time: 11:14 AM
- */
 
 namespace Streams\Data;
 
 use ArrayIterator;
 use IteratorAggregate;
 
-class Stream implements iteratorAggregate
+class Stream implements IteratorAggregate
 {
     private $points = [];
     private $size = 0;
     private $basisTime;
     private $intervalTime;
-
 
     /**
      * construct()
