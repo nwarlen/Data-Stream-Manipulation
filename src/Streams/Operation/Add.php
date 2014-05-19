@@ -2,58 +2,23 @@
 
 namespace Streams\Operation;
 
+require_once __DIR__ . '/StreamOperationInterface.php';
+require_once __DIR__ . '/Operation.php';
 
-use Streams\Data\Point;
-use Streams\Data\Stream;
 
-class Add
+
+class Add extends Operation implements StreamOperationInterface
 {
-    private $validityCheck;
-
-    public function __construct()
-    {
-        $this->validityCheck = new ValidStreams();
-    }
-
-
     /**
-     * combine()
+     * computePoint()
      *
-     * Description: Given a Stream, attempts to add all values in 'this' Stream and the new Stream.
+     * Description: Adds two points together
      *
-     * If any point in either stream is null, it will simply treated as a value of '0'.
-     *
-     * Example: Add: $C = $add->combine(a,b) =>
-     *           A     B     C
-     *          |0|   |1|   |1|
-     *          |1| + |2| = |3|
-     *          |2|   |3|   |5|
-     *
-     * @param Stream $stream1
-     * @param Stream $stream2
-     * @return null|Stream - The resulting Stream --OR-- null if the two Streams cannot be
-     *                       combined
+     * @param $point1
+     * @param $point2
      */
-    public function combine(Stream $stream1, Stream $stream2)
+    public function computePoint($point1, $point2)
     {
-        if(!($this->validityCheck->isValid($stream1,$stream2))) {
-            return null;
-        }
-
-        $basis = $stream1->getBasis();
-        $interval = $stream1->getInterval();
-        $newStream = new Stream($basis,$interval);
-
-        //find the stream with fewer points
-        $numPoints = (($stream1->getSize()) <= ($stream2->getSize()) ? $stream1->getSize() : $stream2->getSize());
-
-        for($index = 0;$index < $numPoints;$index++) {
-            $pointToAdd = new Point();
-            $pointValue = ($stream1->getPoints()[$index]->getValue()) + ($stream2->getPoints()[$index]->getValue());
-            $pointToAdd->setValue($pointValue);
-            $newStream->addPoint($pointToAdd);
-        }
-
-        return $newStream;
+        return $point1 + $point2;
     }
 } 

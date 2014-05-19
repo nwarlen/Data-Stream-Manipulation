@@ -5,52 +5,41 @@ namespace test\Streams\Operation;
 
 require_once __DIR__ . '/../../../src/Streams/Operation/Divide.php';
 
-
-use Streams\Data\Point;
 use Streams\Data\Stream;
 use Streams\Operation\Divide;
 
 class DivideTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-     * @param $point
-     *
-     * @dataProvider pointProvider
-     */
-    public function testItShouldDivideTwoValidStreams($point)
+    public function testItShouldDivideTwoValidStreams()
     {
         $stream1 = new Stream(0,1);
         $stream2 = new Stream(0,1);
 
+        $point = 10;
 
         $stream1->addPoint($point); //value: 10
         $stream2->addPoint($point); //value: 10
 
 
         $divide = new Divide();
-        $newStream = $divide->combine($stream1, $stream2);
+        $newStream = $divide->apply($stream1, $stream2);
 
-        $actual = $newStream->getPoints()[0];
+        $array = iterator_to_array($newStream->getIterator());
 
-        $newPoint = new Point();
-        $newPoint->setValue(1);
+        $actual = $array[0];
 
+        $newPoint = 1;
 
-        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+        $this->assertEquals($newPoint,$actual);
     }
 
-    /**
-     * @param $point1
-     *
-     * @dataProvider pointProvider
-     */
-    public function testItShouldDivideTwoValidStreamsWithZeros($point1)
+    public function testItShouldDivideTwoValidStreamsWithZeros()
     {
         $stream1 = new Stream(0,1);
         $stream2 = new Stream(0,1);
 
-        $point3 = new Point();
-        $point3->setValue(0);
+        $point1 = 5;
+        $point3 = 0;
 
         $stream1->addPoint($point1); //smallPoint value: 5
         $stream2->addPoint($point3); //largePoint value: 0
@@ -59,80 +48,59 @@ class DivideTest extends \PHPUnit_Framework_TestCase
         $divide = new Divide();
 
         /** @var $newStream Stream */
-        $newStream = $divide->combine($stream1, $stream2);
+        $newStream = $divide->apply($stream1, $stream2);
 
-        /** @var $actual Point */
-        $actual = $newStream->getPoints()[0];
+        $array = iterator_to_array($newStream->getIterator());
 
-        $newPoint = new Point();
-        $newPoint->setValue(null); // 5/0=null
+        $actual = $array[0];
 
-
-        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+        $this->assertNull($actual);
     }
 
-    /**
-     * @param Point $point
-     *
-     * @dataProvider pointProvider
-     */
-    public function testItShouldNotDivideTwoStreamsThatAreNotCompatible(Point $point)
+    public function testItShouldNotDivideTwoStreamsThatAreNotCompatible()
     {
         $stream1 = new Stream(1,2);
         $stream2 = new Stream(2,4);
+
+        $point = 10;
 
         $stream1->addPoint($point);
         $stream2->addPoint($point);
 
         $divide = new Divide();
 
-        $returnStream = $divide->combine($stream1,$stream2);
+        $returnStream = $divide->apply($stream1,$stream2);
 
         $this->assertNull($returnStream);
     }
 
-    /**
-     * @param $point
-     *
-     * @dataProvider pointProvider
-     */
-    public function testItShouldHandleNullPoints($point)
+    public function testItShouldHandleNullPoints()
     {
         $stream1 = new Stream();
         $stream2 = new Stream();
 
-        $nullPoint = new Point();
-        $nullPoint->setValue(null);
+        $point = 10;
+        $nullPoint = null;
 
         $stream1->addPoint($point); //value: 10
         $stream2->addPoint($nullPoint); //value: null
 
         $divide = new Divide();
-        $returnStream = $divide->combine($stream1,$stream2);
+        $newStream = $divide->apply($stream1,$stream2);
 
+        $array = iterator_to_array($newStream->getIterator());
 
-        $actual = $returnStream->getPoints()[0];
+        $actual = $array[0];
 
-        $newPoint = new Point();
-        $newPoint->setValue(null);
+        $this->assertNull($actual);
 
-        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+        $newStream = $divide->apply($stream2,$stream1);
 
-        $returnStream = $divide->combine($stream2,$stream1);
-        $actual = $returnStream->getPoints()[0];
+        $array = iterator_to_array($newStream->getIterator());
 
-        $this->assertEquals($newPoint->getValue(),$actual->getValue());
-    }
+        $actual = $array[0];
 
-    public function pointProvider()
-    {
-        $point = new Point();
-        $point->setValue(10);
-        return array(
-            array(
-                $point
-            )
-        );
+        $this->assertNull($actual);
     }
 }
  

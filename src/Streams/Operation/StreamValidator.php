@@ -8,10 +8,9 @@
 
 namespace Streams\Operation;
 
-
 use Streams\Data\Stream;
 
-class ValidStreams
+class StreamValidator
 {
     /**
      * isValid()
@@ -28,8 +27,14 @@ class ValidStreams
     public function isValid(Stream $stream1, Stream $stream2)
     {
         //valid combinations must have same interval time, basis time
-        $returnValue = $stream1->getBasis() == $stream2->getBasis();
-        $returnValue = $returnValue && $stream1->getInterval() == $stream2->getInterval();
-        return $returnValue;
+        if($stream1->getBasis() != $stream2->getBasis()) {
+            return false;
+        }
+
+        if($stream1->getInterval() != $stream2->getInterval()) {
+            return false;
+        }
+
+        return true;
     }
 } 

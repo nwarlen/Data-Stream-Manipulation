@@ -5,132 +5,102 @@ namespace test\Streams\Operation;
 
 require_once __DIR__ . '/../../../src/Streams/Operation/Multiply.php';
 
-use Streams\Data\Point;
 use Streams\Data\Stream;
 use Streams\Operation\Multiply;
 
 class MultiplyTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-    * @param $point
-    *
-    * @dataProvider pointProvider
-    */
-    public function testItShouldMultiplyTwoValidStreams($point)
+    public function testItShouldMultiplyTwoValidStreams()
     {
         $stream1 = new Stream(0,1);
         $stream2 = new Stream(0,1);
 
+        $point = 10;
 
         $stream1->addPoint($point);
         $stream2->addPoint($point);
 
 
         $multiplier = new Multiply();
-        $newStream = $multiplier->combine($stream1, $stream2);
+        $newStream = $multiplier->apply($stream1, $stream2);
 
-        $actual = $newStream->getPoints()[0];
+        $array = iterator_to_array($newStream->getIterator());
+        $actual = $array[0];
 
-        $newPoint = new Point();
-        $newPoint->setValue(100);
+        $newPoint = 100;
 
-
-        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+        $this->assertEquals($newPoint,$actual);
     }
 
-    /**
-     * @param $point1
-     *
-     * @dataProvider pointProvider
-     */
-    public function testItShouldMultiplyTwoValidStreamsWithZeros($point1)
+    public function testItShouldMultiplyTwoValidStreamsWithZeros()
     {
         $stream1 = new Stream(0,1);
         $stream2 = new Stream(0,1);
 
-        $point3 = new Point();
-        $point3->setValue(0);
+        $point1 = 10;
+        $point3 = 0;
 
-        $stream1->addPoint($point1); //smallPoint value: 5
+        $stream1->addPoint($point1); //smallPoint value: 10
         $stream2->addPoint($point3); //largePoint value: 0
 
 
         $multiply = new Multiply();
 
         /** @var $newStream Stream */
-        $newStream = $multiply->combine($stream1, $stream2);
+        $newStream = $multiply->apply($stream1, $stream2);
 
-        /** @var $actual Point */
-        $actual = $newStream->getPoints()[0];
+        $array = iterator_to_array($newStream->getIterator());
+        $actual = $array[0];
 
-        $newPoint = new Point();
-        $newPoint->setValue(0);
+        $newPoint = 0;
 
-        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+        $this->assertEquals($newPoint,$actual);
     }
 
-    /**
-     * @param Point $point
-     *
-     * @dataProvider pointProvider
-     */
-    public function testItShouldNotMultiplyTwoStreamsThatAreNotCompatible(Point $point)
+    public function testItShouldNotMultiplyTwoStreamsThatAreNotCompatible()
     {
         $stream1 = new Stream(1,2);
         $stream2 = new Stream(2,4);
+
+        $point = 10;
 
         $stream1->addPoint($point);
         $stream2->addPoint($point);
 
         $multiplier = new Multiply();
 
-        $returnStream = $multiplier->combine($stream1,$stream2);
+        $returnStream = $multiplier->apply($stream1,$stream2);
 
         $this->assertNull($returnStream);
     }
 
-    /**
-     * @param $point
-     *
-     * @dataProvider pointProvider
-     */
-    public function testItShouldHandleNullPoints($point)
+    public function testItShouldHandleNullPoints()
     {
         $stream1 = new Stream();
         $stream2 = new Stream();
 
-        $nullPoint = new Point();
-        $nullPoint->setValue(null);
+        $point = 10;
+        $nullPoint = null;
 
         $stream1->addPoint($point); //value: 10
         $stream2->addPoint($nullPoint); //value: null
 
         $multiply = new Multiply();
-        $returnStream = $multiply->combine($stream1,$stream2);
+        $newStream = $multiply->apply($stream1,$stream2);
 
+        $array = iterator_to_array($newStream->getIterator());
+        $actual = $array[0];
 
-        $actual = $returnStream->getPoints()[0];
+        $newPoint = null;
 
-        $newPoint = new Point();
-        $newPoint->setValue(null);
+        $this->assertEquals($newPoint,$actual);
 
-        $this->assertEquals($newPoint->getValue(),$actual->getValue());
+        $newStream = $multiply->apply($stream2,$stream1);
 
-        $returnStream = $multiply->combine($stream2,$stream1);
-        $actual = $returnStream->getPoints()[0];
+        $array = iterator_to_array($newStream->getIterator());
+        $actual = $array[0];
 
-        $this->assertEquals($newPoint->getValue(),$actual->getValue());
-    }
-
-    public function pointProvider()
-    {
-        $point = new Point();
-        $point->setValue(10);
-        return array(
-            array(
-                $point
-            )
-        );
+        $this->assertEquals($newPoint,$actual);
     }
 }
  

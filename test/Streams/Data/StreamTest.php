@@ -6,41 +6,34 @@ require_once __DIR__ . '/../../../src/Streams/Data/Stream.php';
 
 
 use PHPUnit_Framework_TestCase;
-use Streams\Data\Point;
 use Streams\Data\Stream;
 
-
-class StreamTest extends PHPUnit_Framework_TestCase {
-
-    /**
-     * @param $point
-     *
-     * @dataProvider pointProvider
-     */
-    public function testItShouldAddPoints($point)
+class StreamTest extends PHPUnit_Framework_TestCase
+{
+    public function testItShouldAddPoints()
     {
+        $point = 10;
         $stream = new Stream();
+
         $size = $stream->getSize();
+
         $stream->addPoint($point);
+
         $sizeAfterAddingPoint = $stream->getSize();
 
         $this->assertTrue($size+1==$sizeAfterAddingPoint);
 
-        $nullPoint = new Point();
-        $nullPoint->setValue(null);
+        $nullPoint = null;
         $stream->addPoint($nullPoint);
         $sizeAfterAddingPoint = $stream->getSize();
 
         $this->assertTrue($size+2 ==$sizeAfterAddingPoint);
     }
 
-    /**
-     * @param Point $point
-     *
-     * @dataProvider pointProvider
-     */
-    public function testItShouldFindAGivenPointInTheListOfPoints(Point $point)
+    public function testItShouldFindAGivenPointInTheListOfPoints()
     {
+        $point = 10;
+
         $stream = new Stream();
         $stream->addPoint($point);
 
@@ -50,8 +43,7 @@ class StreamTest extends PHPUnit_Framework_TestCase {
 
         $this->assertEquals($expected,$index);
 
-        $invalidPoint = new Point();
-        $invalidPoint->setValue(12);
+        $invalidPoint = 12;
 
         //Searching for an invalid point returns null
         $index = $stream->doesContainPoint($invalidPoint);
@@ -59,18 +51,40 @@ class StreamTest extends PHPUnit_Framework_TestCase {
         $this->assertNull($index);
     }
 
-    /**
-     * @return array - Point $point
-     */
-    public function pointProvider()
+    public function testItShouldUpdateAPointThatIsAvailable()
     {
-        $point = new Point();
-        $point->setValue(10);
+        $stream = new Stream();
+        $point = 10;
 
-        return array (
-            array(
-                $point
-            )
-        );
+        $stream->addPoint($point);
+        $stream->addPoint($point);
+
+        $index = 0;
+        $newValue = 5;
+
+        $bool = $stream->setPointAt($index,$newValue);
+
+        $expected = 5;
+
+        $actual = iterator_to_array($stream->getIterator())[0];
+
+        $this->assertTrue($bool);
+        $this->assertEquals($expected,$actual);
+    }
+
+    public function testItShouldNotUpdateAPointThatIsNotAvailable()
+    {
+        $stream = new Stream();
+        $point = 10;
+
+        $stream->addPoint($point);
+        $stream->addPoint($point);
+
+        $index = 2;
+        $newValue = 5;
+
+        $bool = $stream->setPointAt($index,$newValue);
+
+        $this->assertFalse($bool);
     }
 }

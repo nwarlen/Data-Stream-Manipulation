@@ -8,12 +8,16 @@
 
 namespace Streams\Data;
 
-class Stream
+use ArrayIterator;
+use IteratorAggregate;
+
+class Stream implements iteratorAggregate
 {
-    private $points;
+    private $points = [];
+    private $size = 0;
     private $basisTime;
     private $intervalTime;
-    private $size;
+
 
     /**
      * construct()
@@ -27,8 +31,11 @@ class Stream
     {
         $this->basisTime = $basisTime;
         $this->intervalTime = $intervalTime;
-        $this->size = 0;
-        $this->points = [];
+    }
+
+    public function getIterator()
+    {
+        return new ArrayIterator($this->points);
     }
 
     /**
@@ -36,9 +43,9 @@ class Stream
      *
      * Description: Adds a given point to the Stream's list of points
      *
-     * @param Point $point - Point to add
+     * @param $point - Point to add
      */
-    public function addPoint(Point $point)
+    public function addPoint($point)
     {
         $this->points[] = $point;
         $this->size++;
@@ -51,10 +58,10 @@ class Stream
      *              the first index of the point, in the list of points
      *              --OR-- 'null' if the point is not in the list.
      *
-     * @param point - Point to search for
+     * @param $point - Point to search for
      * @return int - Index of the point in the list
      */
-    public function doesContainPoint(Point $point)
+    public function doesContainPoint($point)
     {
         if(($index = array_search($point,$this->points)) === False) {
             $index = null;
@@ -62,12 +69,27 @@ class Stream
         return $index;
     }
 
-    //------GETTERS & SETTERS-------//
-
-    public function getPoints()
+    /**
+     * setPointAt()
+     *
+     * Description: Sets the value of the point at the given index to the
+     *              desired value.
+     *
+     * @param $index - index of the point to update
+     * @param $newValue - value to update the point to
+     *
+     * @return bool - Returns true if point has been updated --OR-- false if not
+     */
+    public function setPointAt($index, $newValue)
     {
-        return $this->points;
+        if($this->size > $index) {
+            $this->points[$index] = $newValue;
+            return true;
+        }
+        return false;
     }
+
+    //------GETTERS & SETTERS-------//
 
     public function getBasis()
     {
