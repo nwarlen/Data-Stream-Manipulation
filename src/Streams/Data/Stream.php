@@ -7,10 +7,10 @@ use IteratorAggregate;
 
 class Stream implements IteratorAggregate
 {
-    private $points = [];
-    private $size = 0;
-    private $basisTime;
-    private $intervalTime;
+    protected $points = [];
+    protected $size = 0;
+    protected $basisTime;
+    protected $intervalTime;
 
     /**
      * construct()

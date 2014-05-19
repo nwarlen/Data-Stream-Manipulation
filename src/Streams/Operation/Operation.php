@@ -1,12 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: nwarlen
- * Date: 5/19/14
- * Time: 10:15 AM
- */
 
 namespace Streams\Operation;
+
+require_once __DIR__ . '/../../../src/Streams/Operation/StreamValidator.php';
 
 use Streams\Data\Stream;
 
