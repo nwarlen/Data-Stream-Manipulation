@@ -44,6 +44,6 @@
 					 
 
 ###TODO###
- - ####[x] Create Constant Point Streams####
+ - [x] ####Create Constant Point Streams####
  - [ ] Create Linear Interpolation Operation
  
