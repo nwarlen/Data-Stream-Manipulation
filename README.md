@@ -1,10 +1,13 @@
 #Create a set of Classes that conform to the following Standards#
 
 
- - Provide an iterable, randomly accessable set of points
- 	 + Stream.php ( Uses Point.php)
- - Store a Basis Time, and Time Interval in each Stream
- - Allow for the following operations to be performed on Streams:
+ - ###Provide an iterable, randomly accessable set of points###
+	 + Stream.php
+	 + ConstantStream.php
+	 
+ - ###Store a Basis Time, and Time Interval in each Stream###
+ 
+ - ###Allow for the following operations to be performed on Streams:###
  	 	
 		1. Addition
 		2. Subtraction
@@ -24,12 +27,12 @@
 			     |2|   |3|   |5|
 					 
 
- - In order to 'combine' (Operations Listed Above) two Streams, the following conditions must be met:
+ - ###In order to 'combine' (Operations Listed Above) two Streams, the following conditions must be met:###
  		
 		1. Basis Times for both Streams must be the same
 		2. Time Interval for both Streams must be the same 
 
- - Null Values will be handled in the following manner:
+ - ###Null Values will be handled in the following manner:###
 		
 		      Addition: null + 10 = 10     --> 10 + null = 10
 		   Subtraction: null - 10 = -10    --> 10 - null = 10
@@ -41,6 +44,6 @@
 					 
 
 ###TODO###
- - [x] Create Constant Point Streams
+ - ####[x] Create Constant Point Streams####
  - [ ] Create Linear Interpolation Operation
  
